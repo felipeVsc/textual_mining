@@ -2,13 +2,15 @@
 
 ### Qual é o problema que você deseja resolver?
 
+Classificação de textos jornalísticos em categorias/tópicos pré-definidos.
+
 Esse projeto envolve a persona de um jornalista, que está no processo de escrever uma notícia. Ele precisa de ajuda para classificar a sua notícia em diferentes tópicos (ex. política, economia e outros), além de precisar gerar títulos que sejam impactantes e resumos que agreguem a informação mais relevante. 
 
-Esse projeto envolve a automação dessas atividades. O foco principal dele será em **classificar notícias em categorias pré-definidas**. Porém, ele também deverá gerar algumas outras informações relevantes como: *título da noticia; resumo da notícia; palavras-chaves*.
+O foco principal dele será em **classificar notícias em categorias pré-definidas**. Porém, ele também deverá gerar algumas outras informações relevantes como: *título da noticia; resumo da notícia; palavras-chaves*.
 
 Ou seja, a partir de um texto dado, o ambiente deverá ser capaz de fornecer:
 
-* Categorias daquele texto
+* Categorias
 * Título
 * Resumo
 * Palavras-chaves
@@ -39,13 +41,11 @@ Citação: Misra, Rishabh. "News Category Dataset." arXiv preprint arXiv:2209.11
 
 ## Metas e Critérios de Sucesso
 
-A etapa de classificação das categorias deverá ter uma taxa de acurácia acima de X. Esse valor é o valor que um DummyClassifier teria nesta atividade.
-
-Para as atividades de resumo (geração de título, geração de resumos) serão utilizadas métricas de distância em conjuntos com datasets de treino e de teste para avaliar quão próximos os textos gerados pela inteligência artificial estão dos produzidos por jornalistas.
+A etapa de classificação das categorias, ponto central desse projeto, deverá ter uma taxa de acurácia acima de 38%. Esse valor é o valor que uma instância de DummyClassifier para as três principais categorias obteve. Esse resultado foi apenas com o embeddings dos dados, sem a realização de nenhum pré-processamento.
 
 ### Escreva como você espera avaliar os resultados e o que considera sucesso mínimo.
 
-A etapa de classificação das categorias deverá ter uma taxa de acurácia acima de X. Esse valor é o valor que um DummyClassifier teria nesta atividade.
+A etapa de classificação das categorias deverá ter uma taxa de acurácia acima de 38%. Esse valor é o valor que um DummyClassifier teria nesta atividade. para as três principais classes, num escopo de 900 itens
 
 Para as atividades de resumo (geração de título, geração de resumos) serão utilizadas métricas de distância em conjuntos com datasets de treino e de teste para avaliar quão próximos os textos gerados pela inteligência artificial estão dos produzidos por jornalistas.
 
