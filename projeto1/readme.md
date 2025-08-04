@@ -1,57 +1,52 @@
-## Descrição do Problema
 
-### Qual é o problema que você deseja resolver?
+## Problem Description
 
-Classificação de textos jornalísticos em categorias/tópicos pré-definidos.
+### What is the problem you want to solve?
 
-Esse projeto envolve a persona de um jornalista, que está no processo de escrever uma notícia. Ele precisa de ajuda para classificar a sua notícia em diferentes tópicos (ex. política, economia e outros), além de precisar gerar títulos que sejam impactantes e resumos que agreguem a informação mais relevante. 
+Classification of journalistic texts into predefined categories/topics.
 
-O foco principal dele será em **classificar notícias em categorias pré-definidas**. Porém, ele também deverá gerar algumas outras informações relevantes como: *título da noticia; resumo da notícia; palavras-chaves*.
+This project involves the persona of a journalist who is in the process of writing a news article. They need help classifying their article into different topics (e.g., politics, economy, and others), as well as generating impactful headlines and summaries that convey the most relevant information.
 
-Ou seja, a partir de um texto dado, o ambiente deverá ser capaz de fornecer:
+The main focus will be on **classifying news articles into predefined categories**. However, it should also generate other relevant information such as: *news headline, news summary, keywords*.
 
-* Categorias
-* Título
-* Resumo
-* Palavras-chaves
+In other words, given a text, the system should be able to provide:
 
+* Categories
+* Headline
+* Summary
+* Keywords
 
-## Base de Dados Utilizada
+## Dataset Used
 
-### Informe a base de dados que será utilizada. Inclua a origem e o link (se aplicável). Informe estatísticas descritivas que considerar relevantes.
+### Specify the dataset that will be used. Include the source and link (if applicable). Provide relevant descriptive statistics.
 
+The dataset used for this project is the "News Category Dataset", available on Kaggle: [https://www.kaggle.com/datasets/rmisra/news-category-dataset](https://www.kaggle.com/datasets/rmisra/news-category-dataset)
 
-O dataset que será utilizado para este trabalho é o dataset "News Category Dataset", disponível no Kaggle: https://www.kaggle.com/datasets/rmisra/news-category-dataset
- 
-O dataset contém 210 mil notícias entre 2012 e 2022, retiradas do HuffPost, um tradicional agrupador de sites baseado nos Estados Unidos. Ele contém dados de notícias de mais de 42 categorias, sendo algumas delas: política; bem estar; viagens; estilo e beleza, entre outros. 
+The dataset contains 210 thousand news articles from 2012 to 2022, taken from HuffPost, a traditional U.S.-based news aggregator. It includes news data from over 42 categories, such as politics, wellness, travel, style & beauty, among others.
 
-Ele é composto dos seguintes atributos:
+It consists of the following attributes:
 
-* category: categoria em que a notícia foi publicada.
-* headline: título da notícia.
-* authors: lista de autores.
-* link: link para a notícia original.
-* short_description: resumo da notícia.
-* date: data de publicação.
+* `category`: category in which the news article was published
+* `headline`: title of the news article
+* `authors`: list of authors
+* `link`: link to the original news article
+* `short_description`: summary of the news article
+* `date`: publication date
 
-Existem alguns detalhes deste dataset, como o fato de que existem cerca de 10 mil notícias entre 2018 e 2022, mas 200 mil entre 2012 e 2018. Porém, como não iremos tratar do aspecto temporal neste projeto, esse fato não deverá influenciar nos resultados. 
+There are some details about the dataset, such as the fact that there are about 10 thousand news articles from 2018 to 2022, but 200 thousand from 2012 to 2018. However, since we will not address the temporal aspect in this project, this fact should not influence the results.
 
+Citation: Misra, Rishabh. "News Category Dataset." *arXiv preprint arXiv:2209.11429* (2022).
 
-Citação: Misra, Rishabh. "News Category Dataset." arXiv preprint arXiv:2209.11429 (2022).
+## Goals and Success Criteria
 
-## Metas e Critérios de Sucesso
+The category classification step, which is the core of this project, should achieve an accuracy rate above 38%. This value corresponds to the result obtained by a DummyClassifier for the three main categories. This result was achieved using only data embeddings, without any preprocessing.
 
-A etapa de classificação das categorias, ponto central desse projeto, deverá ter uma taxa de acurácia acima de 38%. Esse valor é o valor que uma instância de DummyClassifier para as três principais categorias obteve. Esse resultado foi apenas com o embeddings dos dados, sem a realização de nenhum pré-processamento.
+### Explain how you plan to evaluate the results and what you consider as minimum success.
 
-### Escreva como você espera avaliar os resultados e o que considera sucesso mínimo.
+The category classification step should achieve an accuracy rate above 38%. This value corresponds to what a DummyClassifier would achieve on this task, for the three main classes, within a scope of 900 items.
 
-A etapa de classificação das categorias deverá ter uma taxa de acurácia acima de 38%. Esse valor é o valor que um DummyClassifier teria nesta atividade. para as três principais classes, num escopo de 900 itens
+For summarization tasks (headline generation, summary generation), distance metrics will be used on training and test datasets to evaluate how close the AI-generated texts are to those written by journalists.
 
-Para as atividades de resumo (geração de título, geração de resumos) serão utilizadas métricas de distância em conjuntos com datasets de treino e de teste para avaliar quão próximos os textos gerados pela inteligência artificial estão dos produzidos por jornalistas.
+## Additional Comments
 
-
-
-
-## Comentários Adicionais 
-
-A ideia desse projeto não era apenas fazer uma tarefa de classificação, mas por ter a oportunidade de realizar uma demo, também trazer coisas que possam ser aplicadas a um contexto real, que possam facilitar a vida de alguém.
+The idea behind this project was not only to perform a classification task, but also, given the opportunity to deliver a demo, to include features that could be applied in a real-world context and actually help someone.
